@@ -46,4 +46,4 @@ docker run -p 5000:80 servidor-api
 - `Tests`: Testes unitários dos Handlers
 
 ---
-Feito com 💻 e foco em arquitetura limpa para sua prova técnica!
+
