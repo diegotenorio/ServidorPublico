@@ -12,8 +12,8 @@ using ServidorPublico.API.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers()
-    .AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<CreateServidorValidator>());
+builder.Services.AddControllers();
+builder.Services.AddValidatorsFromAssemblyContaining<CreateServidorValidator>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
