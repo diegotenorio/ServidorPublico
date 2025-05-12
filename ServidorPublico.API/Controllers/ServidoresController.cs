@@ -1,3 +1,4 @@
+using System;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using MediatR;
@@ -29,6 +30,21 @@ namespace ServidorPublico.API.Controllers
         {
             var servidores = await _mediator.Send(query);
             return Ok(servidores);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Put(Guid id, UpdateServidorCommand command)
+        {
+            if (id != command.Id) return BadRequest("Id do corpo não confere com o da rota.");
+            var result = await _mediator.Send(command);
+            return result ? NoContent() : NotFound();
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            var result = await _mediator.Send(new InativarServidorCommand { Id = id });
+            return result ? NoContent() : NotFound();
         }
     }
 }
