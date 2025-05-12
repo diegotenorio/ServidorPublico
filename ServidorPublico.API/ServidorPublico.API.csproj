@@ -5,15 +5,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="8.0.0" />
-    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
-    <PackageReference Include="FluentValidation.AspNetCore" Version="11.6.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ServidorPublico.Application\ServidorPublico.Application.csproj" />
-    <ProjectReference Include="..\ServidorPublico.Infrastructure\ServidorPublico.Infrastructure.csproj" />
+    <ProjectReference Include="..\\ServidorPublico.Application\\ServidorPublico.Application.csproj" />
+    <ProjectReference Include="..\\ServidorPublico.Infrastructure\\ServidorPublico.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

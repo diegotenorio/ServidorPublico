@@ -1,0 +1,16 @@
+/workspaces/ServidorPublico/ServidorPublico.Infrastructure/bin/Debug/net8.0/ServidorPublico.Infrastructure.deps.json
+/workspaces/ServidorPublico/ServidorPublico.Infrastructure/bin/Debug/net8.0/ServidorPublico.Infrastructure.dll
+/workspaces/ServidorPublico/ServidorPublico.Infrastructure/bin/Debug/net8.0/ServidorPublico.Infrastructure.pdb
+/workspaces/ServidorPublico/ServidorPublico.Infrastructure/bin/Debug/net8.0/ServidorPublico.Domain.dll
+/workspaces/ServidorPublico/ServidorPublico.Infrastructure/bin/Debug/net8.0/ServidorPublico.Domain.pdb
+/workspaces/ServidorPublico/ServidorPublico.Infrastructure/obj/Debug/net8.0/ServidorPublico.Infrastructure.csproj.AssemblyReference.cache
+/workspaces/ServidorPublico/ServidorPublico.Infrastructure/obj/Debug/net8.0/ServidorPublico.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/ServidorPublico/ServidorPublico.Infrastructure/obj/Debug/net8.0/ServidorPublico.Infrastructure.AssemblyInfoInputs.cache
+/workspaces/ServidorPublico/ServidorPublico.Infrastructure/obj/Debug/net8.0/ServidorPublico.Infrastructure.AssemblyInfo.cs
+/workspaces/ServidorPublico/ServidorPublico.Infrastructure/obj/Debug/net8.0/ServidorPublico.Infrastructure.csproj.CoreCompileInputs.cache
+/workspaces/ServidorPublico/ServidorPublico.Infrastructure/obj/Debug/net8.0/ServidorPublico.Infrastructure.sourcelink.json
+/workspaces/ServidorPublico/ServidorPublico.Infrastructure/obj/Debug/net8.0/Servidor.4041ABB3.Up2Date
+/workspaces/ServidorPublico/ServidorPublico.Infrastructure/obj/Debug/net8.0/ServidorPublico.Infrastructure.dll
+/workspaces/ServidorPublico/ServidorPublico.Infrastructure/obj/Debug/net8.0/refint/ServidorPublico.Infrastructure.dll
+/workspaces/ServidorPublico/ServidorPublico.Infrastructure/obj/Debug/net8.0/ServidorPublico.Infrastructure.pdb
+/workspaces/ServidorPublico/ServidorPublico.Infrastructure/obj/Debug/net8.0/ref/ServidorPublico.Infrastructure.dll

@@ -1,0 +1,12 @@
+/workspaces/ServidorPublico/ServidorPublico.Domain/bin/Debug/net8.0/ServidorPublico.Domain.deps.json
+/workspaces/ServidorPublico/ServidorPublico.Domain/bin/Debug/net8.0/ServidorPublico.Domain.dll
+/workspaces/ServidorPublico/ServidorPublico.Domain/bin/Debug/net8.0/ServidorPublico.Domain.pdb
+/workspaces/ServidorPublico/ServidorPublico.Domain/obj/Debug/net8.0/ServidorPublico.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/ServidorPublico/ServidorPublico.Domain/obj/Debug/net8.0/ServidorPublico.Domain.AssemblyInfoInputs.cache
+/workspaces/ServidorPublico/ServidorPublico.Domain/obj/Debug/net8.0/ServidorPublico.Domain.AssemblyInfo.cs
+/workspaces/ServidorPublico/ServidorPublico.Domain/obj/Debug/net8.0/ServidorPublico.Domain.csproj.CoreCompileInputs.cache
+/workspaces/ServidorPublico/ServidorPublico.Domain/obj/Debug/net8.0/ServidorPublico.Domain.sourcelink.json
+/workspaces/ServidorPublico/ServidorPublico.Domain/obj/Debug/net8.0/ServidorPublico.Domain.dll
+/workspaces/ServidorPublico/ServidorPublico.Domain/obj/Debug/net8.0/refint/ServidorPublico.Domain.dll
+/workspaces/ServidorPublico/ServidorPublico.Domain/obj/Debug/net8.0/ServidorPublico.Domain.pdb
+/workspaces/ServidorPublico/ServidorPublico.Domain/obj/Debug/net8.0/ref/ServidorPublico.Domain.dll

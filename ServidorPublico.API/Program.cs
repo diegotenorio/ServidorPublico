@@ -1,10 +1,13 @@
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
-using ServidorPublico.Infrastructure;
-using MediatR;
 using System.Reflection;
+using MediatR;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using ServidorPublico.Application.Validators;
+using ServidorPublico.Infrastructure;
 using ServidorPublico.API.Middlewares;
 
 var builder = WebApplication.CreateBuilder(args);

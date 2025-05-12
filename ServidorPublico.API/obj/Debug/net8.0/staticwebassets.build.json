@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "yWQdBzD4sju3Gy7a/x24JI+r+UfhmqeJVLljoiZf3sc=",
+  "Source": "ServidorPublico.API",
+  "BasePath": "_content/ServidorPublico.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
