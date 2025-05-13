@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Text.Json;
@@ -30,36 +31,41 @@ namespace ServidorPublico.API.Middlewares
             {
                 _logger.LogWarning("Erro de validação capturado: {mensagens}", ex.Errors);
 
-                context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
-                context.Response.ContentType = "application/json";
-
-                var errors = ex.Errors.Select(e => e.ErrorMessage).ToArray();
-
-                var response = new
+                await EscreverRespostaJsonAsync(context, HttpStatusCode.BadRequest, new
                 {
                     status = 400,
-                    errors
-                };
+                    errors = ex.Errors.Select(e => e.ErrorMessage)
+                });
+            }
+            catch (KeyNotFoundException ex)
+            {
+                _logger.LogWarning("Recurso não encontrado: {mensagem}", ex.Message);
 
-                var json = JsonSerializer.Serialize(response);
-                await context.Response.WriteAsync(json);
+                await EscreverRespostaJsonAsync(context, HttpStatusCode.NotFound, new
+                {
+                    status = 404,
+                    message = ex.Message
+                });
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Erro interno inesperado.");
 
-                context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
-                context.Response.ContentType = "application/json";
-
-                var response = new
+                await EscreverRespostaJsonAsync(context, HttpStatusCode.InternalServerError, new
                 {
                     status = 500,
                     message = "Ocorreu um erro inesperado no servidor."
-                };
-
-                var json = JsonSerializer.Serialize(response);
-                await context.Response.WriteAsync(json);
+                });
             }
+        }
+
+        private static async Task EscreverRespostaJsonAsync(HttpContext context, HttpStatusCode statusCode, object responseObject)
+        {
+            context.Response.StatusCode = (int)statusCode;
+            context.Response.ContentType = "application/json";
+
+            var json = JsonSerializer.Serialize(responseObject);
+            await context.Response.WriteAsync(json);
         }
     }
 }

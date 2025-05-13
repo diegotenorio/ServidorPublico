@@ -24,11 +24,10 @@ var app = builder.Build();
 
 // Pipeline
 app.UseMiddleware<ExceptionMiddleware>();
-
 app.UseSwagger();
 app.UseSwaggerUI();
-
 app.UseAuthorization();
+
 app.MapControllers();
 
 app.MapGet("/", () => Results.Ok("API de Servidores Públicos está no ar!"));

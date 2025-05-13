@@ -8,7 +8,7 @@ using ServidorPublico.Infrastructure;
 
 namespace ServidorPublico.Tests
 {
-    public class CreateServidorHandlerTests
+    public class ServidorHandlerTests
     {
         // Método auxiliar que gera um novo contexto InMemory isolado por teste
         private AppDbContext GetInMemoryContext()
@@ -77,7 +77,7 @@ namespace ServidorPublico.Tests
                 Nome = "Servidor Sem Órgão",
                 Telefone = "61999999999",
                 Email = "semorgao@email.com",
-                OrgaoId = 0, // Inválido
+                OrgaoId = 1, // Inválido
                 LotacaoId = 2,
                 Sala = "103"
             };
@@ -100,7 +100,7 @@ namespace ServidorPublico.Tests
                 Telefone = "61999999999",
                 Email = "semlotacao@email.com",
                 OrgaoId = 1,
-                LotacaoId = 0, // Inválido
+                LotacaoId = 1, // Inválido
                 Sala = "104"
             };
 
