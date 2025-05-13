@@ -1,9 +1,10 @@
 using MediatR;
 using System;
+using ServidorPublico.Application.Validators;
 
 namespace ServidorPublico.Application.Commands
 {
-    public class UpdateServidorCommand : IRequest<bool>
+    public class UpdateServidorCommand : IRequest<bool>, IServidorCommandBase
     {
         public Guid Id { get; set; }
         public string Nome { get; set; }

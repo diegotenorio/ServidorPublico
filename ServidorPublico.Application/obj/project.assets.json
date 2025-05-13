@@ -2,13 +2,13 @@
   "version": 3,
   "targets": {
     "net8.0": {
-      "FluentValidation/11.3.0": {
+      "FluentValidation/12.0.0": {
         "type": "package",
         "compile": {
-          "lib/net7.0/FluentValidation.dll": {}
+          "lib/net8.0/FluentValidation.dll": {}
         },
         "runtime": {
-          "lib/net7.0/FluentValidation.dll": {}
+          "lib/net8.0/FluentValidation.dll": {}
         }
       },
       "MediatR/11.1.0": {
@@ -216,22 +216,18 @@
     }
   },
   "libraries": {
-    "FluentValidation/11.3.0": {
-      "sha512": "AlsfUkdIzSMA2v091K0gT1YjEwc7YR5pIA5yq7PnZivhoH3YETMhZbUySzsLbJKhj/E3ei6nEgtqdm00AVHXeg==",
+    "FluentValidation/12.0.0": {
+      "sha512": "8NVLxtMUXynRHJIX3Hn1ACovaqZIJASufXIIFkD0EUbcd5PmMsL1xUD5h548gCezJ5BzlITaR9CAMrGe29aWpA==",
       "type": "package",
-      "path": "fluentvalidation/11.3.0",
+      "path": "fluentvalidation/12.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "README.md",
         "fluent-validation-icon.png",
-        "fluentvalidation.11.3.0.nupkg.sha512",
+        "fluentvalidation.12.0.0.nupkg.sha512",
         "fluentvalidation.nuspec",
-        "lib/net5.0/FluentValidation.dll",
-        "lib/net6.0/FluentValidation.dll",
-        "lib/net7.0/FluentValidation.dll",
-        "lib/netstandard2.0/FluentValidation.dll",
-        "lib/netstandard2.1/FluentValidation.dll"
+        "lib/net8.0/FluentValidation.dll"
       ]
     },
     "MediatR/11.1.0": {
@@ -577,7 +573,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "FluentValidation >= 11.3.0",
+      "FluentValidation >= 12.0.0",
       "MediatR >= 11.1.0",
       "ServidorPublico.Domain >= 1.0.0",
       "ServidorPublico.Infrastructure >= 1.0.0"
@@ -634,7 +630,7 @@
         "dependencies": {
           "FluentValidation": {
             "target": "Package",
-            "version": "[11.3.0, )"
+            "version": "[12.0.0, )"
           },
           "MediatR": {
             "target": "Package",

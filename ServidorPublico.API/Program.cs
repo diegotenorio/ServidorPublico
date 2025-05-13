@@ -1,4 +1,4 @@
-using Microsoft.AspNetCore.Builder;
+/*using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -28,15 +28,55 @@ builder.Services.AddValidatorsFromAssemblyContaining<CreateServidorValidator>();
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
+//if (app.Environment.IsDevelopment())
+//{
     app.UseSwagger();
     app.UseSwaggerUI();
-}
+//}
 
 // Middleware global de erros
 app.UseMiddleware<ExceptionMiddleware>();
 
 app.UseAuthorization();
 app.MapControllers();
+app.Run();*/
+
+using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using System.Reflection;
+using MediatR;
+using FluentValidation;
+using ServidorPublico.Infrastructure;
+using ServidorPublico.API.Middlewares;
+using ServidorPublico.Application.Validators;
+using Microsoft.AspNetCore.Http;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Serviços
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+builder.Services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("ServidorDb"));
+builder.Services.AddMediatR(Assembly.Load("ServidorPublico.Application"));
+builder.Services.AddValidatorsFromAssemblyContaining<CreateServidorValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<UpdateServidorValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<InativarServidorValidator>();
+
+
+
+var app = builder.Build();
+
+// Pipeline
+app.UseMiddleware<ExceptionMiddleware>();
+
+app.UseSwagger();
+app.UseSwaggerUI();
+
+app.UseAuthorization();
+app.MapControllers();
+
+app.MapGet("/", () => Results.Ok("API de Servidores Públicos está no ar!"));
+
 app.Run();

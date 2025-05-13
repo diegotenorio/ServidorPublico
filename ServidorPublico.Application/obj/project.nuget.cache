@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "rghK+H2OVoM=",
+  "dgSpecHash": "urOh/CwCppU=",
   "success": true,
   "projectFilePath": "/workspaces/ServidorPublico/ServidorPublico.Application/ServidorPublico.Application.csproj",
   "expectedPackageFiles": [
-    "/home/codespace/.nuget/packages/fluentvalidation/11.3.0/fluentvalidation.11.3.0.nupkg.sha512",
+    "/home/codespace/.nuget/packages/fluentvalidation/12.0.0/fluentvalidation.12.0.0.nupkg.sha512",
     "/home/codespace/.nuget/packages/mediatr/11.1.0/mediatr.11.1.0.nupkg.sha512",
     "/home/codespace/.nuget/packages/mediatr.contracts/1.0.1/mediatr.contracts.1.0.1.nupkg.sha512",
     "/home/codespace/.nuget/packages/microsoft.entityframeworkcore/8.0.0/microsoft.entityframeworkcore.8.0.0.nupkg.sha512",
