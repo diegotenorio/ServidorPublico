@@ -49,7 +49,7 @@ using MediatR;
 using FluentValidation;
 using ServidorPublico.Infrastructure;
 using ServidorPublico.API.Middlewares;
-using ServidorPublico.Application.Validators;
+using ServidorPublico.Application.Behaviors;
 using Microsoft.AspNetCore.Http;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -61,8 +61,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("ServidorDb"));
 builder.Services.AddMediatR(Assembly.Load("ServidorPublico.Application"));
 builder.Services.AddValidatorsFromAssemblyContaining<CreateServidorValidator>();
-builder.Services.AddValidatorsFromAssemblyContaining<UpdateServidorValidator>();
-builder.Services.AddValidatorsFromAssemblyContaining<InativarServidorValidator>();
+
+builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
 
 
 
