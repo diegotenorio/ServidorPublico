@@ -1,0 +1,91 @@
+# Build results
+bin/
+obj/
+out/
+artifacts/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.vsp
+*.vspscc
+*.vssscc
+*.orig
+*.cache
+*.log
+*.tlog
+*.pdb
+
+# Visual Studio folders
+.vs/
+.vscode/
+.vscode-test/
+
+# Rider / Resharper
+.idea/
+*.sln.iml
+*.DotSettings.user
+_ReSharper*/
+*.resharper
+
+# IIS Express
+.vsconfig
+/.vs/
+*.iisexpress/
+
+# ASP.NET & Azure Functions
+Properties/launchSettings.json
+local.settings.json
+
+# Docker
+docker-compose.override.yml
+**/docker-compose.*
+**/*.dockerfile
+
+# Paket
+.paket/
+paket-files/
+
+# JetBrains Rider
+.idea/
+
+# Logs
+*.log
+logs/
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+project.lock.json
+project.fragment.lock.json
+
+# Others
+*.dbmdl
+*.dbproj.schemaview
+*.mdf
+*.ldf
+
+# Test Results
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+
+# Deployment
+publish/
+*.publish.xml
+
+# Temp files
+~$*
+*.tmp
+*.bak
+
+# Git conflict
+*.orig
+
+# Dotnet watch
+**/*.dotnetwatch.json
