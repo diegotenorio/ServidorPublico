@@ -8,6 +8,7 @@ using ServidorPublico.Infrastructure;
 using ServidorPublico.API.Middlewares;
 using ServidorPublico.Application.Behaviors;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,6 +20,14 @@ builder.Services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("Serv
 builder.Services.AddMediatR(Assembly.Load("ServidorPublico.Application"));
 builder.Services.AddValidatorsFromAssemblyContaining<CreateServidorValidator>();
 builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
+
+//Versionamento
+builder.Services.AddApiVersioning(opt =>
+{
+    opt.DefaultApiVersion = new ApiVersion(1, 0);
+    opt.AssumeDefaultVersionWhenUnspecified = true;
+    opt.ReportApiVersions = true;
+});
 
 var app = builder.Build();
 

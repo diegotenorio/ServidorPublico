@@ -44,3 +44,4 @@
 /workspaces/ServidorPublico/ServidorPublico.API/obj/Debug/net8.0/ServidorPublico.API.pdb
 /workspaces/ServidorPublico/ServidorPublico.API/obj/Debug/net8.0/ServidorPublico.API.genruntimeconfig.cache
 /workspaces/ServidorPublico/ServidorPublico.API/obj/Debug/net8.0/ref/ServidorPublico.API.dll
+/workspaces/ServidorPublico/ServidorPublico.API/bin/Debug/net8.0/Microsoft.AspNetCore.Mvc.Versioning.dll
