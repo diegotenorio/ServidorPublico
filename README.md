@@ -38,8 +38,9 @@ dotnet restore
 dotnet build
 dotnet run --project ServidorPublico.API
 ```
+A aplicação estará disponível em `https://[SEU-CODESPACE]-5000.app.github.dev/swagger/index.html`.
+Acesse via a aba "Ports" do Codespaces e clique em "Open in browser" na porta 5000.
 
-Acesse: [https://jubilant-waddle-xvg5vxqq64hp7pj-5000.app.github.dev/swagger/](https://jubilant-waddle-xvg5vxqq64hp7pj-5000.app.github.dev/swagger/)
 
 ## 🐳 Executando com Docker
 

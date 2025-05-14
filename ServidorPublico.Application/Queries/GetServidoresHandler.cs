@@ -25,9 +25,9 @@ namespace ServidorPublico.Application.Queries
 
             if (!string.IsNullOrWhiteSpace(request.Nome))
                 query = query.Where(s => s.Nome.Contains(request.Nome));
-            if (request.OrgaoId.HasValue && request.OrgaoId > 0)
+            if (request.OrgaoId.HasValue)
                 query = query.Where(s => s.OrgaoId == request.OrgaoId);
-            if (request.LotacaoId.HasValue && request.LotacaoId >0)
+            if (request.LotacaoId.HasValue)
                 query = query.Where(s => s.LotacaoId == request.LotacaoId);
                 
             // Projeta diretamente em DTOs e retorna a lista
