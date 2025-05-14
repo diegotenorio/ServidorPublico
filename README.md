@@ -28,7 +28,7 @@ dotnet build
 dotnet run --project ServidorPublico.API
 ```
 
-Acesse: [https://localhost:5001/swagger](https://localhost:5001/swagger)
+Acesse: [https://localhost:5000/swagger](https://localhost:5001/swagger)
 
 
 ## 🚀 Executando GitHub Codespaces
@@ -45,8 +45,15 @@ Acesse via a aba "Ports" do Codespaces e clique em "Open in browser" na porta 50
 ## 🐳 Executando com Docker
 
 ```bash
-docker build -t servidor-api .
-docker run -p 5000:80 servidor-api
+docker build -t servidorpublicoapi .
+docker run -d -p 5000:8080 --name servidorpublicoapi servidorpublicoapi:dev
+
+ou
+
+[Selecionar perfil de execução Docker]
+        ↓
+[Executar ▶️ no Visual Studio]
+
 ```
 
 ## 📁 Organização

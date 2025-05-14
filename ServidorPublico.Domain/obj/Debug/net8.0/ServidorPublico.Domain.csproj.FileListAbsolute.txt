@@ -10,3 +10,15 @@
 /workspaces/ServidorPublico/ServidorPublico.Domain/obj/Debug/net8.0/refint/ServidorPublico.Domain.dll
 /workspaces/ServidorPublico/ServidorPublico.Domain/obj/Debug/net8.0/ServidorPublico.Domain.pdb
 /workspaces/ServidorPublico/ServidorPublico.Domain/obj/Debug/net8.0/ref/ServidorPublico.Domain.dll
+C:\Users\diego\source\repos\diegotenorio\ServidorPublico\ServidorPublico.Domain\bin\Debug\net8.0\ServidorPublico.Domain.deps.json
+C:\Users\diego\source\repos\diegotenorio\ServidorPublico\ServidorPublico.Domain\bin\Debug\net8.0\ServidorPublico.Domain.dll
+C:\Users\diego\source\repos\diegotenorio\ServidorPublico\ServidorPublico.Domain\bin\Debug\net8.0\ServidorPublico.Domain.pdb
+C:\Users\diego\source\repos\diegotenorio\ServidorPublico\ServidorPublico.Domain\obj\Debug\net8.0\ServidorPublico.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\diego\source\repos\diegotenorio\ServidorPublico\ServidorPublico.Domain\obj\Debug\net8.0\ServidorPublico.Domain.AssemblyInfoInputs.cache
+C:\Users\diego\source\repos\diegotenorio\ServidorPublico\ServidorPublico.Domain\obj\Debug\net8.0\ServidorPublico.Domain.AssemblyInfo.cs
+C:\Users\diego\source\repos\diegotenorio\ServidorPublico\ServidorPublico.Domain\obj\Debug\net8.0\ServidorPublico.Domain.csproj.CoreCompileInputs.cache
+C:\Users\diego\source\repos\diegotenorio\ServidorPublico\ServidorPublico.Domain\obj\Debug\net8.0\ServidorPublico.Domain.sourcelink.json
+C:\Users\diego\source\repos\diegotenorio\ServidorPublico\ServidorPublico.Domain\obj\Debug\net8.0\ServidorPublico.Domain.dll
+C:\Users\diego\source\repos\diegotenorio\ServidorPublico\ServidorPublico.Domain\obj\Debug\net8.0\refint\ServidorPublico.Domain.dll
+C:\Users\diego\source\repos\diegotenorio\ServidorPublico\ServidorPublico.Domain\obj\Debug\net8.0\ServidorPublico.Domain.pdb
+C:\Users\diego\source\repos\diegotenorio\ServidorPublico\ServidorPublico.Domain\obj\Debug\net8.0\ref\ServidorPublico.Domain.dll

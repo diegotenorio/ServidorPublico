@@ -7,66 +7,76 @@ using ServidorPublico.Application.Queries;
 
 namespace ServidorPublico.API.Controllers
 {
-    // Define que essa classe é um controller de API REST
+    /// <summary>
+    /// Controlador responsável pelo gerenciamento dos servidores públicos.
+    /// Expõe endpoints RESTful para criação, consulta, atualização e inativação de servidores.
+    /// </summary>
     [ApiController]
-    // Define o endpoint base como "api/servidores"
     [Route("api/[controller]")]
     public class ServidoresController : ControllerBase
     {
-        // Injeção de dependência do MediatR para disparar comandos e queries
         private readonly IMediator _mediator;
 
+        /// <summary>
+        /// Construtor que injeta o serviço de MediatR para envio de comandos e queries.
+        /// </summary>
+        /// <param name="mediator">Instância de <see cref="IMediator"/>.</param>
         public ServidoresController(IMediator mediator)
         {
             _mediator = mediator;
         }
 
-        // Endpoint para criar um novo servidor público
-        // Exemplo de chamada: POST /api/servidores
+        /// <summary>
+        /// Cadastra um novo servidor público no sistema.
+        /// </summary>
+        /// <param name="command">Comando contendo os dados do novo servidor.</param>
+        /// <returns>Resposta 201 com o ID do servidor criado.</returns>
         [HttpPost]
         public async Task<IActionResult> Post([FromBody] CreateServidorCommand command)
         {
-            // Envia o comando para o handler via MediatR
             var id = await _mediator.Send(command);
-
-            // Retorna 201 Created com o local do recurso recém-criado
             return CreatedAtAction(nameof(Get), new { id }, id);
         }
 
-        // Endpoint para listar servidores com filtros (nome, orgao, lotacao)
-        // Exemplo de chamada: GET /api/servidores?nome=João
+        /// <summary>
+        /// Lista servidores públicos com filtros opcionais por nome, órgão e lotação.
+        /// </summary>
+        /// <param name="query">Query com os critérios de busca.</param>
+        /// <returns>Lista de servidores encontrados.</returns>
         [HttpGet]
         public async Task<IActionResult> Get([FromQuery] GetServidoresQuery query)
         {
-            // Envia a query para o handler e obtém os resultados
             var servidores = await _mediator.Send(query);
             return Ok(servidores);
         }
 
-        // Endpoint para atualizar um servidor existente
-        // Exemplo de chamada: PUT /api/servidores/{id}
+        /// <summary>
+        /// Atualiza os dados de um servidor público existente.
+        /// </summary>
+        /// <param name="id">Identificador do servidor (vindo da rota).</param>
+        /// <param name="command">Comando contendo os dados atualizados.</param>
+        /// <returns>
+        /// Retorna 204 se atualizado com sucesso, 400 se o ID da rota diverge do corpo, ou 404 se não encontrado.
+        /// </returns>
         [HttpPut("{id}")]
         public async Task<IActionResult> Put(Guid id, UpdateServidorCommand command)
         {
-            // Validação: impede inconsistência entre o id da URL e o do corpo
-            if (id != command.Id) return BadRequest("Id do corpo não confere com o Id informado no filtro.");
+            if (id != command.Id)
+                return BadRequest("Id do corpo não confere com o Id informado na URL.");
 
-            // Envia comando de atualização
             var result = await _mediator.Send(command);
-
-            // Se não encontrou o servidor, retorna 404
             return result ? NoContent() : NotFound();
         }
 
-        // Endpoint para inativar (exclusão lógica) um servidor
-        // Exemplo de chamada: DELETE /api/servidores/{id}
+        /// <summary>
+        /// Inativa (exclusão lógica) um servidor público pelo seu ID.
+        /// </summary>
+        /// <param name="id">Identificador do servidor a ser inativado.</param>
+        /// <returns>204 se inativado com sucesso, ou 404 se não encontrado.</returns>
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(Guid id)
         {
-            // Cria e envia comando de inativação
             var result = await _mediator.Send(new InativarServidorCommand { Id = id });
-
-            // Se não encontrou o servidor, retorna 404
             return result ? NoContent() : NotFound();
         }
     }

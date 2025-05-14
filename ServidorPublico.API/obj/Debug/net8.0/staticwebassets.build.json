@@ -1,11 +1,1 @@
-{
-  "Version": 1,
-  "Hash": "yWQdBzD4sju3Gy7a/x24JI+r+UfhmqeJVLljoiZf3sc=",
-  "Source": "ServidorPublico.API",
-  "BasePath": "_content/ServidorPublico.API",
-  "Mode": "Default",
-  "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
-}
+{"Version":1,"Hash":"AP35cHMtiPPPRVXozafniSP6ZPzWrWElidDsEwPd3AU=","Source":"ServidorPublico.API","BasePath":"_content/ServidorPublico.API","Mode":"Default","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}
