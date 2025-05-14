@@ -1,0 +1,6 @@
+services:
+  servidorpublico.api:
+    image: ${DOCKER_REGISTRY-}servidorpublicoapi
+    build:
+      context: .
+      dockerfile: ServidorPublico.API/Dockerfile
