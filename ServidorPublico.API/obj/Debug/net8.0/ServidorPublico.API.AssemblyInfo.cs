@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ServidorPublico.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2ab644fc69a8c22467f8a898233c045c279925a7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+49f9f5e1d592763d7ac96993460678bbfc251c82")]
 [assembly: System.Reflection.AssemblyProductAttribute("ServidorPublico.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ServidorPublico.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
